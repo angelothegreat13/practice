@@ -6,7 +6,7 @@ function merge_sorted_arrays($arr1, $arr2)
 {
     $n1 = count($arr1);
     $n2 = count($arr2);
-    $arr3[$n1 + $n2] = [];
+    $arr3[$n1 + $n2] = array();
 
     $i = 0;
     $j = 0;
@@ -30,10 +30,16 @@ function merge_sorted_arrays($arr1, $arr2)
         $arr3[$k++] = $arr2[$j++];
     }
 
-    print_r($arr3);
+    return $arr3;
 }
  
 $arr1 = [1,2,3];
-$arr2 = [2,5,6];
+$arr2 = [2,5,6,17];
 
-merge_sorted_arrays($arr1, $arr2);
+$arr3 = merge_sorted_arrays($arr1, $arr2);
+
+// print_r($arr3);
+// echo count($arr1) + count($arr2);
+// echo count($arr3);
+for ($i = 0; $i < count($arr1) + count($arr2); $i++)
+    echo $arr3[$i] . " ";
