@@ -1,20 +1,20 @@
 <?php
 
 // 54 number in total, write algorithm 54 number to random sequence 
-function random_shuffle($numbers)
+function random_shuffle($num)
 {
-    $n = count($numbers);
-
-    for ($i=$n-1; $i>0; $i--) 
-    {
-        $r = mt_rand(0, $i);
-        $tmp = $numbers[$i];
-        $numbers[$i] = $numbers[$r];
-        $numbers[$r] = $tmp;
+    $n = count($num);
+    
+    for ($i=$n-1; $i>0; $i--) {
+        $r = mt_rand(0,$i);
+        $temp = $num[$i];
+        $num[$i] = $num[$r];
+        $num[$r] = $temp;
     }
-
-    print_r($numbers);
+    
+    print_r($num);
 }
 
-$numbers = range(1,54);
-random_shuffle($numbers);
+
+$num = range(1,5);
+random_shuffle($num);

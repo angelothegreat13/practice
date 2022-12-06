@@ -21,6 +21,8 @@ function merge_sorted_arrays($arr1, $arr2)
             $arr3[$k++] = $arr2[$j++];
         }
     }
+
+    print_r($arr3);
  
     while ($i < $n1) {
         $arr3[$k++] = $arr1[$i++];

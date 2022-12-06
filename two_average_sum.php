@@ -1,17 +1,15 @@
 <?php
 
 // Sum the value of array, Average the value of array
-function average_sum_of_array($arr)
+function average_sum($arr)
 {
-    $total = 0;
-    $n = count($arr);
-
-    for ($i=0; $i<$n; $i++) {
-        $total += $arr[$i];
+    $sum = 0;
+    foreach ($arr as $val) {
+        $sum += $val;
     }
-
-    print($total / $n);
+    
+    print($sum / count($arr));
 }
 
-$arr = [5,10,1,20,20,10];
-average_sum_of_array($arr);
+$arr = [10,20,30,40,50];
+average_sum($arr);
